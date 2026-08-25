@@ -1,0 +1,146 @@
+/* Google Fonts Import: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0f172a;    /* Deep Slate/Navy */
+  --accent-color: #2563eb;     /* Professional Blue */
+  --bg-color: lightblue;         /* Light Gray Background */
+  --card-bg: #ffffff;          /* Pure White Card */
+  --text-main: #334155;        /* Soft Black/Charcoal */
+  --text-muted: #64748b;      /* Muted Text */
+  --border-color: #e2e8f0;    /* Light Border */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* Card Container */
+.container {
+  background-color: var(--card-bg);
+  width: 100%;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+/* Headings */
+h1 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-color);
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* Steps List Styling */
+ul.steps-list {
+  list-style: none;
+  counter-reset: step-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+ul.steps-list li {
+  counter-increment: step-counter;
+  position: relative;
+  padding: 0.85rem 1rem 0.85rem 3.25rem;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+/* Numbered Circle Indicator */
+ul.steps-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtle Hover Effect */
+ul.steps-list li:hover {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-sm);
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 100%) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  ul.steps-list li {
+    font-size: 0.9rem;
+  }
+}
+.summary{
+  position: relative;
+  left: 200px;
+}
+#exit{
+  position: relative;
+  top: -550px;
+  left: 300px;
+  height: 30px;
+  width: 30px;
+  background-color: green;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.2s ease-in;
+}
+#exit:hover{
+  background-color: red;
+}
