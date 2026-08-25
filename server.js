@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
 
   // Kung root lang ang hiningi (localhost:3000/), default sa index.html (login page)
   if (filePath === '' || filePath === '/') {
-    filePath = '/index.html';
+    filePath = '/dashboard.html';
   }
 
   // I-resolve ang buong path, at siguraduhing hindi makakalabas sa project folder
