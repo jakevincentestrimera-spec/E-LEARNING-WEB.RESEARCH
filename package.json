@@ -1,0 +1,12 @@
+{
+  "name": "e-learning-website",
+  "version": "1.0.0",
+  "description": "Static E-Learning website, served via a plain Node.js server (no framework, no database).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
